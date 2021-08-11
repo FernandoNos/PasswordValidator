@@ -28,6 +28,8 @@ Este projeto foi desenvolvido utilizando:
 ```
 Foi escolhido separar as camadas de "lógica de segurança", e validação da senha, para que, caso seja necessário modificar a estratégia de validação de senha, ou integrar diferentes estratégias, consigamos atender as necessidades, sem que seja necessário revisitar a solução como um todo. Também optamos por utilizar interfaces entre as camadas de services e controller, e entre os próprios services, para que a real implementação do código não seja levada em consideração durante a execução, sendo possível abstrairmos o "como", e levarmos em consideração somente o contrato estabelecido.
 
+A configuração da regex a ser considerada para a validação, foi colocada no arquivo application.properties.
+
 ### Execução
 #### Executando o projeto
 Para executar o projeto:
@@ -50,3 +52,4 @@ Finalizada a chamada, deve ser visualizada a resposta como ```true``` ou ```fals
 * Incluir Swagger para clareza sobre os endpoints disponíveis;
 * Possível definição de um response no formato JSON, para facilitar a integração de clients;
 * Explorar os tratamentos de cenários de exceção;
+* Utilizar um configuration server para manter a regex, de forma que possamos centralizar a mesma, para casos onde múltiplas instâncias do mesmo serviço estejam sendo executadas;
