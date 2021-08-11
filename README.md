@@ -1,5 +1,4 @@
 # Validador de Senha
-Este projeto foi desenvolvido baseado na descrição presente no link : https://github.com/itidigital/backend-challenge.
 
 ## Solução
 ### Stack
